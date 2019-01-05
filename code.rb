@@ -17,6 +17,12 @@ def milage_rating(num)
   end
 end
 
+def ranking(ships)
+  ships.each_with_index do |ship, index|
+    puts "#{index + 1}. #{ship}"
+  end
+end
+
 shuvver_ship = [260, 483, 792, 357, 546]
 zhook_crusier = [186, 223, 173, 297, 303]
 nanoship = [646, 883, 761, 932, 778]
@@ -29,3 +35,7 @@ nanoship_avg = avg_milage(nanoship)
 puts milage_rating(shuvver_ship_avg)
 puts milage_rating(zhook_crusier_avg)
 puts milage_rating(nanoship_avg)
+puts
+
+ships = ["Nanoship","Shuvver","Snacky Cabs","Resisty's Ship","Zhook Cruiser"]
+ranking(ships)
